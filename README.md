@@ -21,19 +21,15 @@ Informatics**
 
 [zur Webseite](https://gvt.ckitte.de/ea7/)
 
-Im Rahmen der sechsten Einsendeaufgabe sollen vier Kugeln interaktiv durch einen Torus fliegen. 
+Im Rahmen der siebten Einsendeaufgabe soll eine Szene mit mindestens drei, sich überschneidenden Grundkörpern erstellt und deren Tiefe visualisiert werden.
 
-Im Rahmen der Umsetzung der Aufgabe, kreisen innerhalb der Anwendung vier Kugeln kontinuierlich um einen sich drehenden Torus, wobei ihre Bahn zumeist durch den Mittelpunkt des Torus verläuft. Hierbei berühren sich die Kugeln auf ihren Kreisbahnen nicht. 
+Hierfür soll die Tiefe auf Basis der Werte im Z-Puffer visualisiert werden. Fragment, welche näher zur Kamera sind sollen dunkler, die weiter entfernten heller dargestellt werden. Ziel ist es, möglichst viel Tiefe zu erzeugen, so dass der Effekt deutlich wird.
 
+Bild
 
+Die Anwendung verwendet als Grundgerüst, den in der sechsten Einsendeaufgabe genutzte Code. Alle hier vorhandene Interaktionen sind somit auch in dieser Lösung verfügbar.
 
-![](assets/2022-11-24-15-44-36-image.png)
-
-
-
-Die Anwendung verwendet als Grundgerüst, den in der sechsten Einsendeaufgabe genutzte Code. Alle hier vorhandene Interaktion ist auch in dieser Lösung verfügbar.
-
-Die Anzeige des Gittergerüsts der Kugeln und des Torus kann durch die links unten verfügbare Checkbox gesteuert werden. Über der daneben befindlichen Checkbox kann die Animation der Szene ein- und ausgeschaltet werden. Einzelschritte sind daher nicht implementiert
+Die Anzeige des Gittergerüsts der Kugeln und des Torus kann durch die links unten verfügbare Checkbox gesteuert werden. Über der daneben befindlichen Checkbox kann die Animation der Szene ein- und ausgeschaltet werden.
 
 Bild
 
