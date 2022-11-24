@@ -23,7 +23,7 @@ Informatics**
 
 Im Rahmen der siebten Einsendeaufgabe soll eine Szene mit mindestens drei, sich überschneidenden Grundkörpern erstellt und deren Tiefe visualisiert werden.
 
-Hierfür soll die Tiefe auf Basis der Werte im Z-Puffer visualisiert werden. Fragment, welche näher zur Kamera sind sollen dunkler, die weiter entfernten heller dargestellt werden. Ziel ist es, möglichst viel Tiefe zu erzeugen, so dass der Effekt deutlich wird.
+Hierfür soll die Tiefe auf Basis der Werte im Z-Puffer visualisiert werden. Fragment, welche näher zur Kamera sind sollen dunkler, die weiter entfernten heller dargestellt werden. Ziel ist es, möglichst viel Tiefe zu erzeugen, sodass der Effekt deutlich wird.
 
 Bild
 
