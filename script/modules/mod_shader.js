@@ -3,7 +3,8 @@
  * @type {string}
  */
 const vertexShader = `#version 300 es  
-   
+ 
+ //#version 300 es  
     uniform mat4 uModel;
     uniform mat4 uView;
     uniform mat4 uProjection;
@@ -42,10 +43,30 @@ const fragmentShader = `#version 300 es
     in float vBrightness;
     
     out vec4 fragColor;
+    
 
-    void main()
-    {              
-        fragColor=vColor;        
-    }
+
+float near = -10.0; 
+float far  = 100.0; 
+  
+float LinearizeDepth(float depth) 
+{
+    float z = depth * 2.0 - 1.0; // back to NDC 
+    return (2.0 * near * far) / (far + near - z * (far - near));
+}
+
+void main()
+{           
+    //fragColor=vec4(1.0, 0.0, 0.0, 1.0);  
+    float zbuffer = 1.0/gl_FragCoord.z;
+    float depth = LinearizeDepth(gl_FragCoord.z) / far; // divide by far for demonstration
+    fragColor = vec4(zbuffer,zbuffer,zbuffer, 1.0);
+}
+                
+
+
+    
+
+    
     `;
 

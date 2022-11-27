@@ -64,7 +64,7 @@ var app = (function () {
 
         switch (keyName) {
             case "ArrowUp": // ==> nach oben über die Szene
-                            //camera.zAngle += Math.PI / 36;
+                //camera.zAngle += Math.PI / 36;
                 camera.yAngle += deltaRotate;
                 //camera.eye
                 render();
@@ -185,38 +185,6 @@ var app = (function () {
      */
     function initModels() {
         if (activeModel === 0) {
-            createModel(
-                "modSphere",
-                [0, 0, 0],
-                [0, 1, 0], Math.PI / 32,
-                [10, 10, 10],
-                false, Math.PI / 500.0,
-                true, [0.0, 5, 0.0], [850.0, 300.0, 0.0], Math.PI / 100.0);
-
-            createModel(
-                "modSphere",
-                [1, 0.5, 0],
-                [0, 1, 0], Math.PI / 2,
-                [20, 20, 20],
-                false, 0,
-                true, [0.0, -5.0, 0.0], [800.0, 400.0, 0.0], Math.PI / 250.0);
-
-            createModel(
-                "modSphere",
-                [1, 0.5, 0],
-                [0, 0, 0], 0,
-                [20, 20, 20],
-                false, 0,
-                true, [1.0, 7.5, 0.1], [220.0, 300.0, 0.0], Math.PI / 120.0 * -1);
-
-            createModel(
-                "modSphere",
-                [1, 0.5, 0],
-                [0, 0, 0], 0,
-                [40, 40, 40],
-                false, 0,
-                true, [1.0, 1.0, 0.1], [440.0, 200.0, 0.0], Math.PI / 250.0);
-
             createModel(
                 "modTorus",
                 [0, 0, 0],
