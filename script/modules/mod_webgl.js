@@ -96,6 +96,9 @@ var WebGlInstance = (function () {
             console.log(webGL.gl.getShaderInfoLog(fragmentShader));
         }
 
+        //const src = webGL.gl.getExtension('WEBGL_debug_shaders').getTranslatedShaderSource(fsShader);
+        //console.log(src);
+
         webGL.gl.frontFace(webGL.gl.CCW);
         webGL.gl.enable(webGL.gl.CULL_FACE);
         webGL.gl.cullFace(webGL.gl.BACK);

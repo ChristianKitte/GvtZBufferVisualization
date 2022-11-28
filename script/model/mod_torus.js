@@ -63,6 +63,8 @@ var modTorus = (function () {
                 let z = rRing * Math.sin(u);
                 let y = (rTorsoInnen + Math.cos(u) * rRing) * Math.sin(v);
 
+                //console.log(y);
+
                 // Punkte und Farbe definieren
                 vertices.push(x * scale); // X Koordinate
                 vertices.push(y * scale); // Y Koordinate

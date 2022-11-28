@@ -32,7 +32,7 @@ var app = (function () {
         fovy: 60.0 * Math.PI / 180,
         // Camera near plane dimensions:
         // value for left right top bottom in projection.
-        lrtb: 3.0,
+        lrtb: 14.0, //3.0,
         // View matrix.
         vMatrix: glMatrix.mat4.create(),
         // Projection matrix.
@@ -41,7 +41,7 @@ var app = (function () {
         projectionType: "ortho",
         // Angle to Z-Axis for camera when orbiting the center
         // given in radian.
-        zAngle: 0,
+        zAngle: 0.5, //0,
         yAngle: 0,
         // Distance in XZ-Plane from center when orbiting.
         distance: 14,
@@ -64,7 +64,7 @@ var app = (function () {
 
         switch (keyName) {
             case "ArrowUp": // ==> nach oben über die Szene
-                //camera.zAngle += Math.PI / 36;
+                            //camera.zAngle += Math.PI / 36;
                 camera.yAngle += deltaRotate;
                 //camera.eye
                 render();
@@ -89,14 +89,14 @@ var app = (function () {
                 render();
                 break;
             case "p": // +y
-                camera.projectionType = "perspective";
-                projektionsText.innerText = "Projektionstyp: Perspektivisch";
-                render();
+                //camera.projectionType = "perspective";
+                //projektionsText.innerText = "Projektionstyp: Perspektivisch";
+                //render();
                 break;
             case "f": // +y
-                camera.projectionType = "frustum";
-                projektionsText.innerText = "Projektionstyp: Frustum";
-                render();
+                //camera.projectionType = "frustum";
+                //projektionsText.innerText = "Projektionstyp: Frustum";
+                //render();
                 break;
 
             case "s": // +y
@@ -142,8 +142,8 @@ var app = (function () {
                         render();
                         break;
                     case("perspective"):
-                        camera.fovy -= 5 * Math.PI / 180;
-                        render();
+                        //camera.fovy -= 5 * Math.PI / 180;
+                        //render();
                         break;
                 }
                 break;
@@ -186,10 +186,24 @@ var app = (function () {
     function initModels() {
         if (activeModel === 0) {
             createModel(
+                "modKegel",
+                [0, 0, 0],
+                [0, 1, 0], Math.PI / 1.0,
+                [150, 2000, 600],
+                true, Math.PI / 500.0,
+                false, [0.0, 0.0, 0.0], [0.0, 0.0, 0.0], 0);
+            createModel(
+                "modSphere",
+                [0, 0, 0],
+                [1, 1, 0], 30,
+                [500, 500, 500],
+                false, Math.PI / 500.0,
+                false, [0.0, 0.0, 0.0], [0.0, 0.0, 0.0], 0);
+            createModel(
                 "modTorus",
                 [0, 0, 0],
                 [0, 1, 0], 0,
-                [100, 100, 100],
+                [500, 500, 500],
                 true, Math.PI / 500.0,
                 false, [0.0, 0.0, 0.0], [0.0, 0.0, 0.0], 0);
         }
