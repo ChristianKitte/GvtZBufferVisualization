@@ -47,7 +47,7 @@ const fragmentShader = `#version 300 es
 
 
 float near = -10.0; 
-float far  = 100.0; 
+float far  = 500.0; 
   
 float LinearizeDepth(float depth) 
 {
@@ -57,10 +57,12 @@ float LinearizeDepth(float depth)
 
 void main()
 {           
-    //fragColor=vec4(1.0, 0.0, 0.0, 1.0);  
-    float zbuffer = 1.0/gl_FragCoord.z;
+    //fragColor=vec4(1.0, 0.0, 0.0, 1.0);  *15.0
+    //float zbuffer = 1.0/(gl_FragCoord.z*15.0);
+    //float zbuffer = (gl_FragCoord.z*100.0)/(gl_FragCoord.w*4000.0);
     float depth = LinearizeDepth(gl_FragCoord.z) / far; // divide by far for demonstration
-    fragColor = vec4(zbuffer,zbuffer,zbuffer, 1.0);
+    //fragColor = vec4(zbuffer,zbuffer,zbuffer, 1.0);
+    fragColor = vec4(depth,depth,depth, 1.0);
 }
                 
 
