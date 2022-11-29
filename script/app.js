@@ -478,7 +478,8 @@ var app = (function () {
         model.ibo.numerOfEmements = model.verticesIndexTriangle.length;
 
         WebGlInstance.webGL.gl.drawElements(WebGlInstance.webGL.gl.TRIANGLES, model.ibo.numerOfEmements, WebGlInstance.webGL.gl.UNSIGNED_SHORT, 0);
-        if (showLine) {
+
+        if (true) {
             WebGlInstance.webGL.gl.bufferData(WebGlInstance.webGL.gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(model.verticesIndexLine), WebGlInstance.webGL.gl.STATIC_DRAW);
 
             model.ibo.numerOfEmements = model.verticesIndexLine.length;

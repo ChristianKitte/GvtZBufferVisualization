@@ -9,12 +9,6 @@
 var activeModel = 0;
 
 /**
- * Die Einstellung zur Anzeige des Gittergerüstes
- * @type {boolean}
- */
-var showLine = document.getElementById("show-line").checked;
-
-/**
  * Die Einstellung zur Ausführung der Animation
  * @type {boolean}
  */
@@ -60,13 +54,6 @@ window.cancelAnimationFrame = window.cancelAnimationFrame
 //*************************************************************************
 // UI Handler
 //*************************************************************************
-
-/**
- * Setzt den Wert für die Anzeige des Gittermodells und startet das Neuzeichnen
- */
-document.getElementById("show-line").onchange = () => {
-    showLine = document.getElementById("show-line").checked;
-}
 
 /**
  * Setzt den Wert für die Ausführung der Animation
