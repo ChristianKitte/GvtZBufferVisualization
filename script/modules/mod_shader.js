@@ -44,30 +44,19 @@ const fragmentShader = `#version 300 es
     
     out vec4 fragColor;
     
-
-
-float near = -10.00; 
-float far  = 2000.00; 
+    // float near = -10.00; 
+    // float far  = 2000.00; 
   
-float LinearizeDepth(float depth) 
-{
-    float z = depth * 2.0 - 1.0; // back to NDC 
-    return (2.0 * near * far) / (far + near - z * (far - near));
-}
+    // float LinearizeDepth(float depth) 
+    // {
+        // float z = depth * 2.0 - 1.0; // back to NDC 
+        // return (2.0 * near * far) / (far + near - z * (far - near));
+    // }
 
 void main()
-{     
-float originalZ = gl_FragCoord.z / gl_FragCoord.w/25.0;      
-    //fragColor=vec4(1.0, 0.0, 0.0, 1.0);  *15.0
+{          
     float zbuffer = fract(gl_FragCoord.z/0.3);
-    //float zbuffer = (gl_FragCoord.z*100.0)/(gl_FragCoord.w*4000.0);
-    //float depth = LinearizeDepth(gl_FragCoord.z); // divide by far for demonstration
     fragColor = vec4(zbuffer,zbuffer,zbuffer, 1.0);
-    //fragColor = vec4(depth,depth,depth, 1.0);
-    //fragColor = vec4(originalZ,originalZ,originalZ, 1.0);
-    //fragColor = vec4(fract(gl_FragCoord.xy / 50.0), 0, 1);
-    //fragColor = vec4(gl_FragCoord.x / 1000.0, gl_FragCoord.y / 1000.0, gl_FragCoord.z, 1.0);
-
 }
                 
 
