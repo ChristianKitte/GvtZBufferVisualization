@@ -28,13 +28,11 @@ Hierfür soll die Tiefe auf Basis der **Werte im Z-Puffer** visualisiert werden.
 
 Innerhalb der Anwendung sind eine **Kugel**, welche von einem sich **drehenden Torus** umgeben ist, sowie ein **Kegel** zu sehen, der sowohl den Torus als auch die Kugel durchsticht. Um das Bild etwas interessanter zu machen, wurde die Grundseite des Kegels auf **einer Achse gestreckt**. Die Tiefe der Körper wird durch den Helligkeitswert des Grautons visualisiert. Hierbei ist der Ton **umso dunkler, je näher** ein Körper der Kamera kommt.
 
-
-
-![](assets/2022-11-29-15-05-05-image.png)
-
-
+![](assets/2022-11-29-15-34-05-image.png)
 
 Bei starker Neigung sieht man zum einen die nicht sichtbaren Rückseiten im Innern des Kegels als Netzlinien vor der Kugel. Wird die Neigung verstärkt, so erkennt man die Grenzen der Berechnung. Hier werden keine Farben gesetzt, weshalb die Bereiche schwarz erscheinen. 
+
+![](assets/2022-11-29-15-05-05-image.png)
 
 Es zeigte sich, dass die Grautöne am einfachsten durch Anwendung der **fract** Funktion, welche den Nachkommateil einer Zahl liefert, in Kombination mit der Variable **gl_FragCoord** im **Fragment Shader** generiert werden können. Der so erhaltene Wert wird den drei Komponenten des RGB Farbraums zugeordnet, was zu einem Grauton führt. 
 
@@ -45,12 +43,9 @@ void main()
     fragColor = vec4(zbuffer,zbuffer,zbuffer, 1.0);
 
 }
-
 ```
 
 Durch Bewegen in der Horizontalen oder Vertikalen (**Tasten ADWS**) sowie mit Drehbewegungen (**Pfeiltasten**) ändert sich die Grauwerte je nach Ausrichtung. Ein Zoomen (**Tasten z, Z**) hat hingegen hier keine Auswirkung. Über die weiter unten sichtbare **Checkbox** kann die Animation der Szene ein- und ausgeschaltet werden.
-
-
 
 ![](assets/2022-11-29-15-07-21-image.png)
 
