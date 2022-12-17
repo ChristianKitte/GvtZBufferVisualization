@@ -1,5 +1,3 @@
-# GvtZBufferVisualization
-
 Visualisierung von Tiefe mit Hilfe des Z-Buffers in WebGL
 **Dozent: Prof. Dr. Felix Gers (Berliner Hochschule für Technik)**
 
