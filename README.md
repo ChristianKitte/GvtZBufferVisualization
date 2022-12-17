@@ -1,6 +1,3 @@
-Visualisierung von Tiefe mit Hilfe des Z-Buffers in WebGL
-**Dozent: Prof. Dr. Felix Gers (Berliner Hochschule für Technik)**
-
 ![image](https://user-images.githubusercontent.com/32162305/150810942-99672aac-99af-47ea-849b-ba263fae0c3f.png)
 
 ---
